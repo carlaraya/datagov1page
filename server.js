@@ -3,6 +3,12 @@ var path = require('path')
 var app = express()
 var apiRoutes = require('./routes/api');
 
+var mongoose = require('mongoose');
+var mongoDB = process.env.RUPPDB_URI;
+mongoose.connect(mongoDB, { useMongoClient: true });
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
 app.set('port', (process.env.PORT || 8080))
 app.use(express.static(__dirname + '/dist'))
 
