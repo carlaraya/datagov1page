@@ -13,7 +13,7 @@ class Content extends Component {
               this.props.dataInfos.map(function(dataInfo) {
                 return (
                   <List.Item key={dataInfo._id}>
-                    <a href={dataInfo.link} >
+                    <a href={dataInfo.link} target="_blank">
                       {dataInfo.name}
                     </a>
                   </List.Item>

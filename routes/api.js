@@ -53,7 +53,7 @@ var saveDatasetInfoPage = function(i, callback) {
     var datasetInfos = $('.node-title').map(function() {
       return {
         name: $(this).text(),
-        link: "https://gov.ph" + $(this).html().match(/href="(.*)" title/)[1]
+        link: "https://www.gov.ph" + $(this).html().match(/href="(.*)" title/)[1]
       };
     }).toArray();
     async.map(datasetInfos, saveDatasetInfo, callback);
