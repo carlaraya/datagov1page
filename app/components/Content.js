@@ -9,7 +9,7 @@ class Content extends Component {
         <Segment basic>
           <Header as='h3'>Datasets</Header>
           <List>
-            {
+            { this.props.dataInfos ?
               this.props.dataInfos.map(function(dataInfo) {
                 return (
                   <List.Item key={dataInfo._id}>
@@ -18,7 +18,7 @@ class Content extends Component {
                     </a>
                   </List.Item>
                 )
-              })
+              }) : <p>w8 lang...</p>
             }
           </List>
         </Segment>

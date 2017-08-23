@@ -7,7 +7,6 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      allDataInfos: []
     };
     // fetch all data
     axios.get('/api/get_all').then(function(axiosResponse) {
