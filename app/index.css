@@ -1,0 +1,7 @@
+html, body {
+    height : 100%;            /* Internet Explorer treats as min-height. */
+}
+
+.content {
+    margin-left: 13rem;
+}
