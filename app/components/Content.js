@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Sidebar, Segment, Menu, Header, List } from 'semantic-ui-react';
+import { Accordion, Sidebar, Segment, Menu, Header, List } from 'semantic-ui-react';
+import DatasetView from './DatasetView';
 
 class Content extends Component {
-
   render() {
     return (
       <div className='content'>
@@ -12,11 +12,8 @@ class Content extends Component {
             { this.props.dataInfos ?
               this.props.dataInfos.map(function(dataInfo) {
                 return (
-                  <List.Item key={dataInfo._id}>
-                    <a href={dataInfo.link} target="_blank">
-                      {dataInfo.name}
-                    </a>
-                  </List.Item>
+                  <DatasetView
+                    dataInfo={dataInfo} key={dataInfo._id} />
                 )
               }) : <p>w8 lang...</p>
             }

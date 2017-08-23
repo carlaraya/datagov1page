@@ -52,7 +52,7 @@ var saveDatasetInfoPage = function(i, callback) {
     var $ = cheerio.load(axiosResponse.data);
     var datasetInfos = $('.node-title').map(function() {
       return {
-        name: $(this).text(),
+        name: $(this).text().trim(),
         link: "https://www.gov.ph" + $(this).html().match(/href="(.*)" title/)[1]
       };
     }).toArray();

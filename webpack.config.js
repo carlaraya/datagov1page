@@ -17,8 +17,8 @@ var config = {
           test: /\.(png|gif|jpe?g)$/,
           loader: 'url-loader',
           options: {
-              limit: 10000,
-              name: '/img/[name]-[hash:8].[ext]'
+              limit: 10000
+            //name: '/img/[name]-[hash:8].[ext]'
           }
       },
       {
@@ -26,7 +26,7 @@ var config = {
           loader: 'url-loader',
           options: {
               limit: 5000,
-              name: '/font/[name]-[hash:8].[ext]'
+            //name: '/font/[name]-[hash:8].[ext]'
           }
       },
     ]
